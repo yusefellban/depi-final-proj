@@ -26,8 +26,8 @@ function App() {
     <>
     <Routes>
       <Route path = '/' element = {<HomePage/>} />
-      <Route path = '/login' element = {!user? <LoginPage/> : <Navigate to={"/"}/>} />
-      <Route path = '/signup' element = {!user?<SignUpPage/> : <Navigate to={"/"}/>} />
+      <Route path = '/login' element = {user? <Navigate to={"/"}/> : <LoginPage/> } />
+      <Route path = '/signup' element = {user? <Navigate to={"/"}/> : <SignUpPage/>} />
     </Routes>
     <Footer/>
     <Toaster/>

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import App from './../App';
+
 const SignUpPage = () => {
     const [email , setEmail] = useState("");
     const [username , setUsername] = useState("");
@@ -33,7 +33,7 @@ const SignUpPage = () => {
                     <input type="email"
                     className='w-full px-3 py-2 mt-1 border border-gray-700 rounded-md bg-transparent text-white
                     focus:outline focus:ring'
-                    placeholder='abdelrahman-yousri@email.com'
+                    placeholder='abdelrahman@email.com'
                     id='email'
                     onChange={(e) => setEmail(e.target.value)}
                     />
@@ -45,7 +45,7 @@ const SignUpPage = () => {
                     <input type="text"
                     className='w-full px-3 py-2 mt-1 border border-gray-700 rounded-md bg-transparent text-white
                     focus:outline focus:ring'
-                    placeholder='Mazen-AbdelNasser'
+                    placeholder='Ahmed AbdelNasser'
                     id='username'
                     onChange={(e) => setUsername(e.target.value)}
                     />
@@ -71,7 +71,7 @@ const SignUpPage = () => {
             <div className='text-gray-400 text-center'>
                 Already have an account?
                 <Link to = {"/login"} className='text-red-600 underline px-1'>
-                    Sign in
+                    Login
                 </Link>
             </div>
             </div>

@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Footer = () => {
         return (
             <footer className='py-6 md:px-8 md:py-0 bg-black text-white border-t border-gray-800'>
@@ -14,15 +12,15 @@ const Footer = () => {
                             target='_blank'
                             className='font-medium underline underline-offset-4 mr-2'
                         >Ahmed Yousri</a>
-                        <a href=""
+                        <a href="https://github.com/Abdelrahman1625"
                             target='_blank'
                             className='font-medium underline underline-offset-4 mr-2'
                         >Abdelrahman Adel</a>
-                        <a href=""
+                        <a href="https://github.com/MazenHassan10"
                             target='_blank'
                             className='font-medium underline underline-offset-4 mr-2'
                         >Mazen Hassan</a>
-                        <a href=""
+                        <a href="https://github.com/yusefellban"
                             target='_blank'
                             className='font-medium underline underline-offset-4 mr-2'
                         >Youssef El-Laban</a>

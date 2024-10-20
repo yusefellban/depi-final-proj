@@ -1,13 +1,18 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useAuthStore } from '../store/authUser';
 
 const SignUpPage = () => {
-    const [email , setEmail] = useState("");
     const [username , setUsername] = useState("");
     const [password , setPassword] = useState("");
+    const {searchParams} = new URL(document.location);
+    const emailValue = searchParams.get("email")
+    console.log(emailValue)
+    const [email , setEmail] = useState(emailValue || "");
+    const {signup} = useAuthStore();
     const handleSignUp = (e)=> {
         e.preventDefault();
-        console.log(email , username ,password)
+        signup({email , username, password})
     }
     return (
         <div className='h-screen w-full hero-bg'>

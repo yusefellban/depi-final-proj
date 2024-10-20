@@ -1,15 +1,17 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useAuthStore } from '../store/authUser';
 
 
 const LoginPage = () => {
-  const [email , setEmail] = useState("");
-  const [password , setPassword] = useState("");
-  const handleLogin = (e) => {
+    const [email , setEmail] = useState("");
+    const [password , setPassword] = useState("");
+    const {login} = useAuthStore();
+    const handleLogin = (e) => {
     e.preventDefault();
-    console.log(email , password)
-  }
-  return (
+    login({email,password})
+}
+    return (
     <div className='h-screen w-full hero-bg'>
     {/* Header of Navigation*/}
     <header className='max-w-6xl mx-auto flex items-center justify-between p-4'>
